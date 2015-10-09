@@ -50,7 +50,6 @@ h2 {
     font-size: 18px;
     background: #569116;
     padding: 10px 20px 10px 20px;
-    margin-top: 15px;
     text-decoration: none;
     width: 200px;
     margin-left: auto;
@@ -157,12 +156,27 @@ table{
     float: right;
     color: #7EBC54;
     font-size: 16px;
+    margin-left: 600px;
+}
+#linkToViewLess{
+    position: relative;
+    float: left;
+    color: #7EBC54;
+    font-size: 16px;
 }
 
-#linkToViewMore:hover{
+#linkToViewMore:hover, #linkToViewLess:hover{
     color: white;
 }
 
+#prevExists{
+    display: inline-block;
+}
+#curRange{
+    color: white;
+    font-size: 18px;
+
+}
 
 
 
