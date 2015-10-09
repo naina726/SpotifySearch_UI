@@ -113,7 +113,7 @@ var renderSongs = function() {
         var trackHTML = '<tr class="oneSong" data-id="' + songResults[i].tagNumber + '"><td id="coverDiv"><img id="albumCover" src="' + songResults[i].cover + '" alt="heart.png"></img></td><td id="resText">' + songResults[i].name + '</td><td id="resText">' + songResults[i].artist + '</td><td id="resText">' + songResults[i].album + '</td></tr>';
         $(".resultsTable").append(trackHTML);
     }
-    $(".oneSong").bind("click",function(){
+    $(".oneSong").bind("click", function() {
         var tempThis = $(this);
         var tagNum = $(this).attr("data-id")
         for (var i = 0; i < songResults.length; i++) {
@@ -134,7 +134,7 @@ var renderSongs = function() {
     });
     var resNumLine = '<h3 id="linkToViewMore"> Showing Results ' + ((offset * 10) + 1) + ' - ' + ((offset * 10) + 10) + '    ></h3><br><br>';
     $(".showResults").append(resNumLine);
-    $('#linkToViewMore').bind( "click", function(){
+    $('#linkToViewMore').bind("click", function() {
         viewMore();
     });
     //var viewMoreButton = '<input type="button" value="View More" id="viewMoreButton" onclick="viewMore();" /><br>';
@@ -147,11 +147,10 @@ var viewMore = function() {
     clearResDiv();
     offset++;
     var offsetValue = offset * 10;
-    if((queryString.search("&offset=")+1)){
+    if ((queryString.search("&offset=") + 1)) {
         queryString = queryString.substring(0, queryString.length - 2);
         queryString += offsetValue;
-    }
-    else{
+    } else {
         queryString += ("&offset=" + offsetValue);
     }
     console.log(queryString);
@@ -166,14 +165,10 @@ var searchAgain = function() {
     $(".resultsTable").empty();
     $(".allResults").empty();
     offset = 0;
-}
+};
 
-var clearResDiv = function(){
+var clearResDiv = function() {
     $(".allResults").empty();
     $(".resultsTable").empty();
     songResults = [];
-}
-
-
-
-
+};
