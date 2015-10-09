@@ -38,7 +38,7 @@ var createQuery = function() {
     queryString = "https://api.spotify.com/v1/search?q=";
 
     if ((artist == '') && (song == '') && (album == '') && (genre == '') && (year == '')) {
-        alert('All inputs cannot be left blank');
+        console.log("No input");
     } else {
         if (artist != '') {
             artist = artist.replace(/ /g, '%20');
@@ -135,6 +135,12 @@ var renderSongs = function() {
     var resNumLine = '<h3 id="linkToViewMore"> Showing Results ' + ((offset * 10) + 1) + ' - ' + ((offset * 10) + 10) + '    ></h3><br><br>';
     $(".showResults").append(resNumLine);
     $('#linkToViewMore').bind("click", function() {
+        // $(".resultsTable").empty();
+        // // $(".allResults").empty();
+        // offset++;
+        // var offsetValue = offset * 10;
+        // queryString += ("&offset=" + offsetValue);
+        // lookupQuery(queryString);
         viewMore();
     });
     //var viewMoreButton = '<input type="button" value="View More" id="viewMoreButton" onclick="viewMore();" /><br>';
@@ -156,8 +162,6 @@ var viewMore = function() {
     console.log(queryString);
     lookupQuery(queryString);
 }
-
-
 var searchAgain = function() {
     $('html, body').animate({
         scrollTop: $("body").offset().top
@@ -165,10 +169,10 @@ var searchAgain = function() {
     $(".resultsTable").empty();
     $(".allResults").empty();
     offset = 0;
-};
+}
 
 var clearResDiv = function() {
     $(".allResults").empty();
     $(".resultsTable").empty();
     songResults = [];
-};
+}
