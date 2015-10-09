@@ -1,41 +1,41 @@
 <!DOCTYPE>
 <html>
 
-<head>
-    <title>Spotify Search</title>
-    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script type="text/javascript" src="script.js"></script>
-</head>
+    <head>
+        <title>Spotify Search</title>
+        <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
 
-<body>
-    <img id="logoImage" src="logo.jpg">
-    <div id="searchSection">
-        <h2> Find music from Spotify! </h2>
-        <h4> Enter information into one or more boxes to search: </h4>
-        <form class="searchParameters">
-            <input type="text" id="artist" placeholder="Enter an arist's name" />
-            <br>
-            <input type="text" id="song" placeholder="Enter a song name" />
-            <br>
-            <input type="text" id="album" placeholder="Enter an album name" />
-            <br>
-            <div id="moreParams">
-                <input type="text" id="genre" placeholder="Enter a genre" />
+    <body>
+        <img id="logoImage" src="logo.jpg">
+        <div id="searchSection">
+            <h2> Find music from Spotify! </h2>
+            <h4> What do you want to search for? </h4>
+            <form class="searchParameters">
+                <input type="text" id="artist" placeholder="Enter an arist's name" />
                 <br>
-                <input type="text" id="year" placeholder="Enter a year or range" />
+                <input type="text" id="song" placeholder="Enter a song name" />
                 <br>
-            </div>
-            <input type="button" value="Advanced" id="addParams" onclick="addMoreParams();" />
-            <input type="button" value="Search" id="searchButton" onclick="createQuery();" />
-        </form>
-    </div>
-    <div class="allResults">
-    </div>
-    
-</body>
+                <input type="text" id="album" placeholder="Enter an album name" />
+                <br>
+                <div id="moreParams">
+                    <input type="text" id="genre" placeholder="Enter a genre" />
+                    <br>
+                    <input type="text" id="year" placeholder="Enter a year or range" />
+                    <br>
+                </div>
+                <input type="button" value="Advanced" id="addParams" onclick="addMoreParams();" />
+                <input type="button" value="Search" id="searchButton" onclick="createQuery();" />
+            </form>
+        </div>
+        <div class="allResults">
+        </div>
+        
+    </body>
 
 </html>

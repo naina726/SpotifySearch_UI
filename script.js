@@ -69,9 +69,6 @@ var offset = 0;
 var songResults = [];
 
 var lookupQuery = function(queryString) {
-    //clear array? 
-    songResults = [];
-
     $('html, body').animate({
         scrollTop: $(".allResults").offset().top
     }, 1500);
@@ -85,11 +82,6 @@ var lookupQuery = function(queryString) {
             $(".allResults").append(noResultsFound);
             $(".searchParameters").trigger('reset');
         } else {
-
-            //clear array ?
-            while(songResults.length != 0){
-                var deleteMe = songResults.pop();
-            }
             for (var i = 0; i < response.tracks.items.length; i++) {
                 var thisThing = {
                     name: response.tracks.items[i].name,
@@ -143,12 +135,7 @@ var renderSongs = function() {
     var resNumLine = '<h3 id="linkToViewMore"> Showing Results ' + ((offset * 10) + 1) + ' - ' + ((offset * 10) + 10) + '    ></h3><br><br>';
     $(".showResults").append(resNumLine);
     $('#linkToViewMore').bind( "click", function(){
-        $(".resultsTable").empty();
-        $(".allResults").empty();
-        offset++;
-        var offsetValue = offset * 10;
-        queryString += ("&offset=" + offsetValue);
-        lookupQuery(queryString);
+        viewMore();
     });
     //var viewMoreButton = '<input type="button" value="View More" id="viewMoreButton" onclick="viewMore();" /><br>';
     //$(".showResults").append(viewMoreButton);
@@ -160,24 +147,31 @@ var viewMore = function() {
     clearResDiv();
     offset++;
     var offsetValue = offset * 10;
-    queryString += ("&offset=" + offsetValue);
+    if((queryString.search("&offset=")+1)){
+        queryString = queryString.substring(0, queryString.length - 2);
+        queryString += offsetValue;
+    }
+    else{
+        queryString += ("&offset=" + offsetValue);
+    }
     console.log(queryString);
     lookupQuery(queryString);
 }
+
+
 var searchAgain = function() {
     $('html, body').animate({
         scrollTop: $("body").offset().top
     }, 1500);
     $(".resultsTable").empty();
     $(".allResults").empty();
+    offset = 0;
 }
 
-// WHY THE FUCK DOESNT THIS WORK
 var clearResDiv = function(){
-    $(".oneSong").empty();
-    $("tbody").empty();
-    $(".resultsTable").empty();
     $(".allResults").empty();
+    $(".resultsTable").empty();
+    songResults = [];
 }
 
 
