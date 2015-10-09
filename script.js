@@ -69,7 +69,9 @@ var offset = 0;
 var songResults = [];
 
 var lookupQuery = function(queryString) {
-    songResults = []
+    //clear array? 
+    songResults = [];
+
     $('html, body').animate({
         scrollTop: $(".allResults").offset().top
     }, 1500);
@@ -84,6 +86,10 @@ var lookupQuery = function(queryString) {
             $(".searchParameters").trigger('reset');
         } else {
 
+            //clear array ?
+            while(songResults.length != 0){
+                var deleteMe = songResults.pop();
+            }
             for (var i = 0; i < response.tracks.items.length; i++) {
                 var thisThing = {
                     name: response.tracks.items[i].name,
