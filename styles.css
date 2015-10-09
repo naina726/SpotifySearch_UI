@@ -1,0 +1,174 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+#logoImage {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    padding-top: 20px;
+}
+
+#searchSection {
+    width: 700px;
+    height: 350px;
+    background-color: #2f2f2f;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+#searchButton{
+    -webkit-border-radius: 16;
+    -moz-border-radius: 16;
+    border-radius: 25px;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    background: #569116;
+    padding: 10px 20px 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    width: 130px;
+}
+#addParams:hover, #searchButton:hover, #secondSearch:hover, #viewMoreButton:hover {
+	background: #8DC253;
+  	text-decoration: none;
+}
+#secondSearch{
+    -webkit-border-radius: 16;
+    -moz-border-radius: 16;
+    border-radius: 25px;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    background: #569116;
+    padding: 10px 20px 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#viewMoreButton{
+    -webkit-border-radius: 16;
+    -moz-border-radius: 16;
+    border-radius: 25px;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    background: #569116;
+    padding: 10px 20px 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    width: 160px;
+}
+
+#addParams{
+	-webkit-border-radius: 16;
+    -moz-border-radius: 16;
+    border-radius: 25px;
+    border: 1px solid white;
+    color: white;
+    font-size: 18px;
+    background: #2f2f2f;
+    padding: 10px 20px 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+	margin-right: 20px;
+}
+#artist, #song, #album, #genre, #year {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    text-align: center;
+    background-color: #2f2f2f;
+    width: 300px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #8DC253;
+}
+
+#moreParams {
+    display: none;
+}
+.allResults{
+	width: 80%;
+	margin-top: 140px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 80px;
+}
+.showResults p{
+	color: white;
+}
+
+table{
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 14px;
+    text-align: left;
+}
+
+.table td{
+	width: 500px;
+    height: 70px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    text-align: left;
+}
+#resText{
+    width: 300px;
+    padding-top: 30px;
+}
+
+#headerTD{
+    height: 30px;
+}
+#headerText{
+	color: #7EBC54;
+	font-size: 18px;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: #2f2f2f;
+}
+
+#albumCover{
+    height: 60px;
+}
+#coverDiv{
+    width: 100px;
+}
+
+#linkToViewMore{
+    position: relative;
+    float: right;
+    color: #7EBC54;
+    font-size: 16px;
+}
+
+#linkToViewMore:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
