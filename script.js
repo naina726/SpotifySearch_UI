@@ -160,11 +160,14 @@ var renderSongs = function() {
             viewLess();
         });      
     }
-    var resNext = '<h3 id="linkToViewMore"> More Results > </h3><br><br>';
-    $("#viewNextOrPrevDiv").append(resNext);
-    $('#linkToViewMore').bind("click", function() {
-        viewMore();
-    });
+    if (songResults.length == 10){
+        var resNext = '<h3 id="linkToViewMore"> More Results > </h3><br><br>';
+        $("#viewNextOrPrevDiv").append(resNext);
+        $('#linkToViewMore').bind("click", function() {
+            viewMore();
+        });
+        
+    }
 
 
     var currentResDisp = '<h3 id="curRange"> Showing Results: ' + ((offset * 10) + 1) + ' - ' + ((offset * 10) + 10) + '</h3><br>'
