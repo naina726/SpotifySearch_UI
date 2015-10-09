@@ -144,8 +144,6 @@ var renderSongs = function() {
                    
             }
         }
-
-        
     });
 
 
@@ -166,7 +164,9 @@ var renderSongs = function() {
         $('#linkToViewMore').bind("click", function() {
             viewMore();
         });
-        
+    }
+    else{
+        $("#linkToViewMore").css("display", "none");
     }
 
 
