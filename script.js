@@ -69,6 +69,7 @@ var offset = 0;
 var songResults = [];
 
 var lookupQuery = function(queryString) {
+    songResults = []
     $('html, body').animate({
         scrollTop: $(".allResults").offset().top
     }, 1500);
@@ -82,6 +83,7 @@ var lookupQuery = function(queryString) {
             $(".allResults").append(noResultsFound);
             $(".searchParameters").trigger('reset');
         } else {
+
             for (var i = 0; i < response.tracks.items.length; i++) {
                 var thisThing = {
                     name: response.tracks.items[i].name,
@@ -166,6 +168,8 @@ var searchAgain = function() {
 
 // WHY THE FUCK DOESNT THIS WORK
 var clearResDiv = function(){
+    $(".oneSong").empty();
+    $("tbody").empty();
     $(".resultsTable").empty();
     $(".allResults").empty();
 }
